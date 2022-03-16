@@ -1,0 +1,118 @@
+@import '../../../variables';
+
+$inputColor: $bostonBlue;
+$inputBorder: #CDD9ED;
+$inputBackground: #fff;
+
+$inputBorderFocus: $blueMine;
+
+$groupColor: $bostonBlue;
+$groupBorder: $inputBorder;
+$groupBackground: #EEF4FF;
+
+$groupColorFocus: #fff;
+$groupBorderFocus: $blueMine;
+$groupBackgroundFocus: $bostonBlue;
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+
+  * {
+    margin-bottom: 0.25rem;
+  }
+
+  .form-group {
+    position: relative;
+
+    display: flex;
+
+    width: fit-content;
+
+    & > label,
+    .form-field {
+      white-space: nowrap;
+      display: block;
+
+      &:not(:first-child):not(:last-child) {
+        border-radius: 0;
+      }
+
+      &:first-child {
+        border-radius: 6px 0 0 6px;
+      }
+
+      &:last-child {
+        border-radius: 0 6px 6px 0;
+      }
+
+      &:not(:first-child) {
+        margin-left: -1px;
+      }
+    }
+
+    .form-field {
+      position: relative;
+      z-index: 1;
+      flex: 1 1 auto;
+
+      display: block;
+
+      width: 16ch;
+      @media (min-width: 600px) {
+        width: 32ch;
+      }
+      height: 3rem;
+
+      margin-top: 0;
+      margin-bottom: 0;
+
+      padding: 8px 16px;
+
+      font-size: 1rem;
+
+      color: $inputColor;
+      background: $inputBackground;
+
+      border: 1px solid $inputBorder;
+      border-radius: 6px;
+
+      transition: border .3s ease;
+
+      &:focus {
+        outline: none;
+
+        border-color: $inputBorderFocus;
+      }
+    }
+
+    & > label {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      width: 10ch;
+      height: 3rem;
+
+      padding: 8px 12px;
+
+      color: $groupColor;
+      background: $groupBackground;
+      border: 1px solid $groupBorder;
+
+      transition: background .3s ease, border .3s ease, color .3s ease;
+    }
+
+    &:focus-within {
+      & > label {
+        color: $groupColorFocus;
+        background: $groupBackgroundFocus;
+        border-color: $groupBorderFocus;
+      }
+    }
+  }
+
+  .invalid {
+    border-color: red !important;
+  }
+}

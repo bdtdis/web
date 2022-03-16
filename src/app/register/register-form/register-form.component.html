@@ -1,0 +1,34 @@
+<div class="register-form">
+  <form [formGroup]="registerForm">
+    <div class="form-group">
+      <label for="first-name">First Name</label>
+      <input id="first-name"
+             formControlName="firstName"
+             [class.invalid]="registerForm.get('firstName')?.touched && registerForm.get('firstName')?.errors"
+             class="form-field"
+             type="text"
+             maxlength="32"/>
+    </div>
+    <div class="form-group">
+      <label for="last-name">Last Name</label>
+      <input id="last-name"
+             formControlName="lastName"
+             [class.invalid]="registerForm.get('lastName')?.touched && registerForm.get('lastName')?.errors"
+             class="form-field"
+             type="text"
+             maxlength="32"/>
+    </div>
+    <div class="form-group">
+      <label for="last-name">E-Mail</label>
+      <input id="email"
+             formControlName="email"
+             [class.invalid]="registerForm.get('email')?.touched && registerForm.get('email')?.errors"
+             class="form-field"
+             type="text"/>
+    </div>
+  </form>
+  <cbutton (click)="onRegister()"
+           [disabled]="!registerForm.valid"
+           [icon]="registerButton.icon"
+           [text]="registerButton.text"></cbutton>
+</div>

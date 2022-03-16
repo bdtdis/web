@@ -1,0 +1,17 @@
+@import '../../tab-content';
+
+@include fill-routed();
+
+.login {
+  @include tab-content();
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  span {
+    margin-bottom: 1rem;
+  }
+}

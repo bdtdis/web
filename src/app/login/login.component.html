@@ -1,0 +1,12 @@
+<div class="login">
+  <ng-container *ngIf="!scanning; else scan">
+    <span>Please scan your QR Code in order to log in.</span>
+    <cbutton icon="qr_code_scanner" text="Scan QR" (click)="scanQr()"></cbutton>
+  </ng-container>
+</div>
+
+<ng-template #scan>
+  <zxing-scanner
+    (scanSuccess)="onQrCodeRead($event)"
+  ></zxing-scanner>
+</ng-template>

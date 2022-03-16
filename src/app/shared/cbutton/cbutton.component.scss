@@ -1,0 +1,33 @@
+@import "../../../variables";
+
+:host(.disabled) {
+  pointer-events: none;
+}
+
+.cbutton {
+  background: $bostonBlue;
+  border-radius: 25px;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+  border: 1px solid $blueMine;
+  width: fit-content;
+  user-select: none;
+
+  &:hover {
+    background: lighten($bostonBlue, 10%);
+  }
+}
+
+.right-margin {
+  margin-right: 10px;
+}
+
+.disabled {
+  background-color: grey;
+  border: none;
+  cursor: default;
+}

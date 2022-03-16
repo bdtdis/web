@@ -1,0 +1,109 @@
+@import "../variables";
+
+mat-progress-bar {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
+
+.notifications {
+  display: flex;
+  flex-direction: column;
+
+  pointer-events: none;
+
+  position: fixed;
+  z-index: 999;
+
+  width: 100%;
+  overflow: hidden;
+
+  padding: 1rem;
+
+  .notification {
+    border-radius: 15px;
+    color: white;
+    padding: 1rem;
+    width: fit-content;
+    margin-bottom: 1rem;
+  }
+}
+
+.app {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper {
+  height: 100%;
+  width: 100%;
+
+  @media (min-width: 1200px) {
+    width: 1200px;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .logo {
+    height: 125px;
+    margin: 10px 20px 10px -10px;
+    cursor: pointer;
+  }
+
+  .user {
+    display: flex;
+    align-items: center;
+
+    &__details {
+      display: flex;
+      flex-direction: column;
+      margin-right: 1rem;
+
+      color: white;
+
+      @media (max-width: 500px) {
+        display: none;
+      }
+
+      &--children {
+        text-align: center;
+      }
+    }
+  }
+}
+
+.page-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.tabs {
+  overflow: auto;
+
+  .nav {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    width: fit-content;
+
+    &__item {
+      list-style-type: none;
+
+      &:not(:last-child) {
+        ::ng-deep {
+          a {
+            border-right: 1px solid $blueMine;
+          }
+        }
+      }
+    }
+  }
+}

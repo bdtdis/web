@@ -1,1 +1,34 @@
+@import 'variables.scss';
+
 /* You can add global styles to this file, and also import other style files */
+html,
+body,
+app-root {
+  min-height: 100%;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: $blueMine;
+}
+
+* {
+  box-sizing: border-box;
+
+  font-family: 'Verdana', serif;
+}
+
+ul {
+  margin: 0;
+}
+
+.no-padding .mat-dialog-container {
+  padding: 0;
+  border-radius: 0;
+  overflow: unset;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
