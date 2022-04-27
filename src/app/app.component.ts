@@ -46,7 +46,7 @@ export class AppComponent {
   private handleSession() {
     const id = localStorage.getItem('id');
     if (id) {
-      this.store.dispatch(userActions.logIn({id: +id}));
+      this.store.dispatch(userActions.logIn({id}));
     }
   }
 

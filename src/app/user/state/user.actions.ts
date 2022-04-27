@@ -3,7 +3,7 @@ import {UserState} from "./user.state";
 
 export const logIn = createAction(
   '[Log In Component] Log In',
-  props<{ id: number }>(),
+  props<{ id: string }>(),
 );
 
 export const logInSuccess = createAction(

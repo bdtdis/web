@@ -10,7 +10,7 @@ export class UserService {
   constructor(private apiGatewayService: ApiGatewayService) {
   }
 
-  getUserDetails(id: number): Observable<UserState> {
+  getUserDetails(id: string): Observable<UserState> {
     return this.apiGatewayService.get<UserState>(`user/${id}`);
   }
 

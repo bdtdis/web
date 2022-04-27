@@ -3,7 +3,7 @@ import {UserState} from "./user.state";
 import * as userActions from './user.actions';
 
 export const initialState: UserState = {
-  id: 0,
+  id: '0',
   firstName: '',
   lastName: '',
   email: '',

@@ -20,7 +20,7 @@ export class UserEffects {
   logInSuccess$ = createEffect(() => this.actions$.pipe(
       ofType(userActions.logInSuccess),
       tap(({user}) => {
-        localStorage.setItem('id', user.id.toString());
+        localStorage.setItem('id', user.id);
         this.router.navigate(['/home']);
       }),
     ),
