@@ -24,6 +24,7 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatProgressBarModule} from "@angular/material/progress-bar";
 import {LoadingInterceptor} from "./shared/loading/loading.interceptor";
 import {NotificationsEffects} from "./shared/notifications/state/notifications.effects";
+import {VideoDialogComponent} from "./home/video-dialog/video-dialog.component";
 
 @NgModule({
   declarations: [
@@ -34,12 +35,12 @@ import {NotificationsEffects} from "./shared/notifications/state/notifications.e
     HomeComponent,
     CbuttonComponent,
     RegisterFormComponent,
+    VideoDialogComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatIconModule,
     StoreModule.forRoot(reducers),
     EffectsModule.forRoot([UserEffects, NotificationsEffects]),
     ZXingScannerModule,
@@ -49,6 +50,7 @@ import {NotificationsEffects} from "./shared/notifications/state/notifications.e
     MatButtonModule,
     FormsModule,
     MatProgressBarModule,
+    MatIconModule,
   ],
   providers: [
     {

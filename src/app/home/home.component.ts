@@ -10,6 +10,7 @@ import {NotificationsService} from "../shared/notifications/notifications.servic
 import {NotificationType} from "../shared/notifications/state/notifications.state";
 import {Video} from "../shared/models/video.model";
 import {VideoService} from "./video.service";
+import {VideoDialogComponent} from "./video-dialog/video-dialog.component";
 
 @Component({
   selector: 'home',
@@ -62,7 +63,12 @@ export class HomeComponent implements OnDestroy {
     return this.videos.filter((v) => v.category === category);
   }
 
-  public playVideo(id: number): void {
-    alert("Not yet implemented!");
+  public playVideo(video: Video): void {
+    this.dialog.open(VideoDialogComponent, {
+      width: '700px',
+      height: '500px',
+      panelClass: 'no-padding',
+      data: video,
+    });
   }
 }

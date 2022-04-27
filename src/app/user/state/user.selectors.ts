@@ -10,3 +10,5 @@ export const getUserDetails = createSelector(getUserState, (state) => ({
   lastName: state.lastName,
   favoriteVideos: state.favoriteVideos,
 }));
+
+export const getUserId = createSelector(getUserState, (state) => state.id);

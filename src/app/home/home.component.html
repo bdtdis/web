@@ -7,7 +7,7 @@
       <span>{{category | titlecase}}</span>
     </div>
     <div class="category__videos">
-      <div *ngFor="let video of getVideosByCategory(category)" class="category__videos--video" (click)="playVideo(video.id)">
+      <div *ngFor="let video of getVideosByCategory(category)" class="category__videos--video" (click)="playVideo(video)">
         <ng-container>
           <img src="{{video.thumbnail}}" />
         </ng-container>

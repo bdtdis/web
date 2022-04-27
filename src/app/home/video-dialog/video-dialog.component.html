@@ -1,0 +1,11 @@
+<div class="video-dialog">
+  <div class="video-dialog__header">
+    <span>Video</span>
+    <button mat-mini-fab color="warn" (click)="dialogRef.close()"><mat-icon>close</mat-icon></button>
+  </div>
+  <div class="video-dialog__content">
+    <video width="600" height="300" controls>
+      <source [src]="'http://localhost:5000/videos/' + data.href + '?uuid=' + (uuid$ | async)" type="video/mp4">
+    </video>
+  </div>
+</div>
