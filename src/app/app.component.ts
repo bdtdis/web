@@ -18,7 +18,6 @@ export class AppComponent {
   Tabs = Tab;
   NotificationType = NotificationType;
 
-  logo = '../assets/logo.png';
   selected: Tab = Tab.HOME;
 
   isLoggedIn$ = this.store.select(fromUser.isLoggedIn);
