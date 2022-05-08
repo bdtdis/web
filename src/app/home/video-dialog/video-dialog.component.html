@@ -5,7 +5,7 @@
   </div>
   <div class="video-dialog__content">
     <video width="600" height="300" controls>
-      <source [src]="'http://localhost:5000/videos/' + data.href + '?uuid=' + (uuid$ | async)" type="video/mp4">
+      <source [src]="'https://bdtdis-watermarking.herokuapp.com/videos/' + data.href + '?uuid=' + (uuid$ | async)" type="video/mp4">
     </video>
   </div>
 </div>
