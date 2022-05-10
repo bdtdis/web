@@ -16,8 +16,8 @@ export class RegisterComponent {
   ) {
   }
 
-  register({firstName, lastName, email}: { [key: string]: string }) {
-    this.userService.createUser(firstName, lastName, email)
+  register({firstName, lastName, email, password}: { [key: string]: string }) {
+    this.userService.createUser(firstName, lastName, email, password)
       .subscribe({
         next: (user) => {
           this.store.dispatch(userActions.logIn({id: user.id}));

@@ -14,7 +14,11 @@ export class UserService {
     return this.apiGatewayService.get<UserState>(`user/${id}`);
   }
 
-  createUser(firstName: string, lastName: string, email: string): Observable<UserState> {
-    return this.apiGatewayService.post<UserState>('user', { firstName, lastName, email });
+  createUser(firstName: string, lastName: string, email: string, password: string): Observable<UserState> {
+    return this.apiGatewayService.post<UserState>('user', { firstName, lastName, email, password });
+  }
+
+  login(email: string, password: string): Observable<{ id: string }> {
+    return this.apiGatewayService.get<{ id: string }>(`user/${email}/pass/${password}`);
   }
 }
