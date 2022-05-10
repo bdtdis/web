@@ -3,5 +3,5 @@ export interface UserState {
   firstName: string;
   lastName: string;
   email: string;
-  favoriteVideos: number[];
+  banned: boolean;
 }

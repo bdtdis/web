@@ -19,7 +19,7 @@ import {VideoDialogComponent} from "./video-dialog/video-dialog.component";
 })
 export class HomeComponent implements OnDestroy {
   userDetails$ = this.store.select(fromUser.getUserDetails);
-  userDetails: { firstName: string, lastName: string, favoriteVideos: number[] };
+  userDetails: { firstName: string, lastName: string, banned: boolean };
 
   categories = ['action', 'comedy', 'anime'];
   videos: Video[] = [];

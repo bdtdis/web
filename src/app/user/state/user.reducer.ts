@@ -7,7 +7,7 @@ export const initialState: UserState = {
   firstName: '',
   lastName: '',
   email: '',
-  favoriteVideos: [],
+  banned: false,
 };
 
 const _userReducer = createReducer(

@@ -8,7 +8,7 @@ export const isLoggedIn = createSelector(getUserState, (state) => state.id !== '
 export const getUserDetails = createSelector(getUserState, (state) => ({
   firstName: state.firstName,
   lastName: state.lastName,
-  favoriteVideos: state.favoriteVideos,
+  banned: state.banned,
 }));
 
 export const getUserId = createSelector(getUserState, (state) => state.id);

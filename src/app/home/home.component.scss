@@ -3,6 +3,22 @@
 
 @include fill-routed();
 
+.banned {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 1.25rem;
+
+  mat-icon {
+    width: 10rem;
+    height: 10rem;
+    font-size: 10rem;
+    color: #323232;
+  }
+}
+
 .home {
   @include tab-content();
 
