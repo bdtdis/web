@@ -21,7 +21,7 @@ export class HomeComponent implements OnDestroy {
   userDetails$ = this.store.select(fromUser.getUserDetails);
   userDetails: { firstName: string, lastName: string, banned: boolean };
 
-  categories = ['action', 'comedy', 'anime'];
+  categories = ['animals', 'nature'];
   videos: Video[] = [];
 
   destroyed$ = new Subject();
